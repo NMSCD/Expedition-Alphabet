@@ -1,0 +1,51 @@
+.alphabet-grid {
+    margin: 0 2em;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 10px;
+    grid-auto-rows: minmax(50px, auto);
+}
+
+.alphabet-block {
+    border: 3px rgba(0, 0, 0, 0.15) dashed;
+    border-radius: 10px;
+
+    p {
+        margin: 0;
+        text-transform: capitalize;
+        text-align: center;
+        border-bottom: 3px rgba(0, 0, 0, 0.15) dashed;
+    }
+
+    img {
+        margin: 10px 0;
+    }
+}
+
+.alphabet-block:nth-child(2n) .letter {
+    color: #e9c46a;
+}
+
+.alphabet-block:nth-child(3n) .letter {
+    color: #264653;
+}
+
+.alphabet-block:nth-child(5n) .letter {
+    color: #2a9d8f;
+}
+
+.alphabet-block:nth-child(7n) .letter {
+    color: #f4a261;
+}
+
+.alphabet-letter {
+    font-weight: bold;
+    font-size: 4em;
+    color: #e76f51;
+    text-transform: uppercase;
+}
+
+.alphabet-selectedLetter {
+    background-color: #eed9cb;
+    border-radius: 50%;
+}

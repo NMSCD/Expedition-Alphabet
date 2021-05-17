@@ -1,26 +1,23 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
-function App() {
+import * as route from './constants/route';
+import { ScrollToTop } from './components/core/scroll/scrollToTop';
+
+import { HomePresenter } from './pages/home/homePresenter';
+import { AlphabetPresenter } from './pages/alphabet/alphabetPresenter';
+
+interface IProps { }
+
+export const App: React.FC<IProps> = (props: IProps) => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <ScrollToTop>
+        <Switch>
+          <Route exact={true} path={route.home} component={HomePresenter} />
+          <Route path={route.alphabet} component={AlphabetPresenter} />
+        </Switch>
+      </ScrollToTop>
+    </BrowserRouter>
   );
 }
-
-export default App;
