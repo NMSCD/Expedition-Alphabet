@@ -1,24 +1,24 @@
 {
   "files": {
     "main.css": "/expedition-alphabet/static/css/main.b885e97b.chunk.css",
-    "main.js": "/expedition-alphabet/static/js/main.2251cb8e.chunk.js",
-    "main.js.map": "/expedition-alphabet/static/js/main.2251cb8e.chunk.js.map",
+    "main.js": "/expedition-alphabet/static/js/main.c46f5f44.chunk.js",
+    "main.js.map": "/expedition-alphabet/static/js/main.c46f5f44.chunk.js.map",
     "runtime-main.js": "/expedition-alphabet/static/js/runtime-main.eed29f7b.js",
     "runtime-main.js.map": "/expedition-alphabet/static/js/runtime-main.eed29f7b.js.map",
-    "static/js/2.4bcfb493.chunk.js": "/expedition-alphabet/static/js/2.4bcfb493.chunk.js",
-    "static/js/2.4bcfb493.chunk.js.map": "/expedition-alphabet/static/js/2.4bcfb493.chunk.js.map",
+    "static/js/2.2d11c8db.chunk.js": "/expedition-alphabet/static/js/2.2d11c8db.chunk.js",
+    "static/js/2.2d11c8db.chunk.js.map": "/expedition-alphabet/static/js/2.2d11c8db.chunk.js.map",
     "static/js/3.56d464eb.chunk.js": "/expedition-alphabet/static/js/3.56d464eb.chunk.js",
     "static/js/3.56d464eb.chunk.js.map": "/expedition-alphabet/static/js/3.56d464eb.chunk.js.map",
     "index.html": "/expedition-alphabet/index.html",
     "static/css/main.b885e97b.chunk.css.map": "/expedition-alphabet/static/css/main.b885e97b.chunk.css.map",
-    "static/js/2.4bcfb493.chunk.js.LICENSE.txt": "/expedition-alphabet/static/js/2.4bcfb493.chunk.js.LICENSE.txt",
+    "static/js/2.2d11c8db.chunk.js.LICENSE.txt": "/expedition-alphabet/static/js/2.2d11c8db.chunk.js.LICENSE.txt",
     "static/media/main.scss": "/expedition-alphabet/static/media/overlay4.c2ffd603.svg",
     "static/media/custom.scss": "/expedition-alphabet/static/media/nmsBackground.fa253c0e.jpg"
   },
   "entrypoints": [
     "static/js/runtime-main.eed29f7b.js",
-    "static/js/2.4bcfb493.chunk.js",
+    "static/js/2.2d11c8db.chunk.js",
     "static/css/main.b885e97b.chunk.css",
-    "static/js/main.2251cb8e.chunk.js"
+    "static/js/main.c46f5f44.chunk.js"
   ]
 }
