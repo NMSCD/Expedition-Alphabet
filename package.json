@@ -1,7 +1,7 @@
 {
   "name": "nomanssky-expeditions-alphabet",
   "homepage": "https://NMSCD.github.io/expedition-alphabet",
-  "version": "0.1.7",
+  "version": "0.1.8",
   "private": false,
   "scripts": {
     "start": "react-scripts start",
@@ -16,7 +16,6 @@
     "node-sass": "^6.0.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
-    "react-ga": "^3.3.0",
     "react-router-dom": "^5.2.0",
     "react-router-hash-link": "^2.4.3",
     "react-scripts": "4.0.3",

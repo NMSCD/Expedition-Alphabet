@@ -2,12 +2,9 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 
 import { App } from './App';
-import { setupAnalytics } from './helper/analytics';
 
 import './scss/main.scss';
 import './scss/custom.scss';
-
-setupAnalytics();
 
 ReactDOM.render(
   <React.StrictMode>

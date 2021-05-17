@@ -1,6 +1,5 @@
 import React from 'react';
 
-import { logPageView } from '../../helper/analytics';
 import { AlphabetPresenter } from './alphabetPresenter';
 
 interface IState {
@@ -15,10 +14,6 @@ export class AlphabetContainer extends React.Component<IProps, IState> {
         this.state = {
             typedChars: []
         }
-    }
-
-    componentDidMount() {
-        logPageView('AlphabetPageView');
     }
 
     updateTypedChars = (newChar: string) => {
