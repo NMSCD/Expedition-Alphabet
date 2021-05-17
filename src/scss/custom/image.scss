@@ -1,6 +1,9 @@
 img.error {
-    margin: 1.25em 1em 0 1em;
     opacity: 0.3;
+
+    &.alphabet {
+        margin: 1.25em 1em 0 1em;
+    }
 }
 
 img.small {

@@ -47,6 +47,7 @@ export const AlphabetPresenter: React.FC<IProps> = (props: IProps) => {
                                         <BasicImage
                                             imageUrl={`/expedition-alphabet/assets/img/alphabet/${char}.svg`}
                                             fallbackSrc={`/expedition-alphabet/${AppImage.unknownImage}`}
+                                            classNames="alphabet"
                                             imageName={char}
                                         />
                                     </div>
@@ -55,9 +56,10 @@ export const AlphabetPresenter: React.FC<IProps> = (props: IProps) => {
                         }
                     </div>
                 </section>
-                <section className="main style3">
+                <section className="main style3" style={{ paddingTop: '4em' }}>
                     <div className="row">
                         <div className="col-12 ta-center mb1">
+                            <p>Type something!</p>
                             {
                                 (props.typedChars ?? []).map((char: string, index: number) => {
                                     if (char === ' ') char = 'space';
@@ -78,6 +80,7 @@ export const AlphabetPresenter: React.FC<IProps> = (props: IProps) => {
                             <input
                                 type="text" id="sentence" name="sentence"
                                 style={{ width: '80%', margin: '0 auto' }}
+                                placeholder="Secret text..."
                                 onChange={onChange}
                             />
                         </div>

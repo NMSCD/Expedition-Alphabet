@@ -1,11 +1,17 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 
 import * as route from '../../constants/route';
 import { Header } from '../../components/common/header';
 import { Footer } from '../../components/common/footer';
 import { BasicInternalLink, BasicLink } from '../../components/core/link';
+import { logPageView } from '../../helper/analytics';
 
 export const HomePresenter: React.FC = () => {
+    const effectTracker = '';
+    useEffect(() => {
+        logPageView('HomePageView');
+    }, [effectTracker]);
+
     return (
         <>
             <div className="wrapper">
