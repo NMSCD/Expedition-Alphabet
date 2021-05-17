@@ -1,9 +1,14 @@
 @import 'custom/image';
+@import 'custom/form';
 @import 'custom/alphabet';
 @import 'custom/background';
 
 .ta-center {
     text-align: center;
+}
+
+.mb1 {
+    margin-bottom: 1em;
 }
 
 .no-select {

@@ -33,7 +33,7 @@ export const HomePresenter: React.FC = () => {
                         <header className="major">
                             <h2>What we have so far...</h2>
                         </header>
-                        <div className="row gtr-150">
+                        <div className="row gtr-150" style={{ justifyContent: 'center' }}>
                             <div className="col-4 col-12-medium">
                                 <span className="image fit">
                                     <img src="assets/img/pioneer.png" alt="" />
@@ -58,6 +58,14 @@ export const HomePresenter: React.FC = () => {
                                 <p>Ray Renolds translated an entire sentence!</p>
                                 <ul className="actions special">
                                     <li><BasicLink href="https://twitter.com/RayReynoldsNMS/status/1394259724317646852/photo/1" additionalClassNames="button">View on Twitter</BasicLink></li>
+                                </ul>
+                            </div>
+                            <div className="col-4 col-12-medium">
+                                <span className="image fit"><img src="assets/img/nolindor.png" alt="" /></span>
+                                <h3>Nolindor</h3>
+                                <p>No Man's Sky Decryption Youtube Video</p>
+                                <ul className="actions special">
+                                    <li><BasicLink href="https://www.youtube.com/watch?v=YpfpN9iX2WA" additionalClassNames="button">View on Youtube</BasicLink></li>
                                 </ul>
                             </div>
                         </div>

@@ -5,7 +5,7 @@ import * as route from './constants/route';
 import { ScrollToTop } from './components/core/scroll/scrollToTop';
 
 import { HomePresenter } from './pages/home/homePresenter';
-import { AlphabetPresenter } from './pages/alphabet/alphabetPresenter';
+import { AlphabetContainer } from './pages/alphabet/alphabetContainer';
 
 interface IProps { }
 
@@ -15,7 +15,7 @@ export const App: React.FC<IProps> = (props: IProps) => {
       <ScrollToTop>
         <Switch>
           <Route exact={true} path={route.home} component={HomePresenter} />
-          <Route path={route.alphabet} component={AlphabetPresenter} />
+          <Route path={route.alphabet} component={AlphabetContainer} />
         </Switch>
       </ScrollToTop>
     </HashRouter>

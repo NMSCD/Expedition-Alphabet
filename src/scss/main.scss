@@ -1247,6 +1247,10 @@ button,
         background-image: url('images/overlay1.png'), url('./images/header.jpg');
         background-size: auto, cover;
     }
+
+    &.style3 {
+        background: rgb(240, 240, 240);
+    }
 }
 
 /* Header */

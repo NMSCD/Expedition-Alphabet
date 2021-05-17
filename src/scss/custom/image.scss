@@ -2,3 +2,13 @@ img.error {
     margin: 1.25em 1em 0 1em;
     opacity: 0.3;
 }
+
+img.small {
+    max-width: 40px;
+    max-height: 40px;
+}
+
+img.tiny {
+    max-width: 20px;
+    max-height: 20px;
+}
