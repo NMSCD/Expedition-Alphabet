@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 
 import { App } from './App';
+import { setupAnalytics } from './helper/analytics';
 
 import './scss/main.scss';
 import './scss/custom.scss';
@@ -16,11 +17,6 @@ ReactDOM.render(
 );
 
 
-
-
-function setupAnalytics() {
-  throw new Error('Function not implemented.');
-}
 // reportWebVitals((props: any) => {
 //   console.log(props);
 //   // const { id, name, value } = props;
