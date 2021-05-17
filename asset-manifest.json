@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/expedition-alphabet/static/css/main.99156e3e.chunk.css",
-    "main.js": "/expedition-alphabet/static/js/main.9629a12b.chunk.js",
-    "main.js.map": "/expedition-alphabet/static/js/main.9629a12b.chunk.js.map",
+    "main.js": "/expedition-alphabet/static/js/main.cc08b047.chunk.js",
+    "main.js.map": "/expedition-alphabet/static/js/main.cc08b047.chunk.js.map",
     "runtime-main.js": "/expedition-alphabet/static/js/runtime-main.025d1331.js",
     "runtime-main.js.map": "/expedition-alphabet/static/js/runtime-main.025d1331.js.map",
     "static/js/2.06455a3c.chunk.js": "/expedition-alphabet/static/js/2.06455a3c.chunk.js",
@@ -17,6 +17,6 @@
     "static/js/runtime-main.025d1331.js",
     "static/js/2.06455a3c.chunk.js",
     "static/css/main.99156e3e.chunk.css",
-    "static/js/main.9629a12b.chunk.js"
+    "static/js/main.cc08b047.chunk.js"
   ]
 }
