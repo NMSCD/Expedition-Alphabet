@@ -68,7 +68,7 @@ export const AlphabetPresenter: React.FC<IProps> = (props: IProps) => {
                                         <BasicImage
                                             key={`typed-${char}-${index}`}
                                             classNames={imageClass}
-                                            imageUrl={`/expedition-alphabet/assets/img/alphabet/${char}.svg`}
+                                            imageUrl={`/expedition-alphabet/assets/img/alphabet/${char.toLowerCase()}.svg`}
                                             fallbackSrc={`/expedition-alphabet/${AppImage.unknownImage}`}
                                             imageName={char}
                                         />
