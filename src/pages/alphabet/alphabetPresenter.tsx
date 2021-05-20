@@ -24,7 +24,7 @@ export const AlphabetPresenter: React.FC<IProps> = (props: IProps) => {
         imageClass = 'tiny';
     }
 
-    const alphabet = "abcdefghijklmnopqrstuvwxyz.".split("");
+    const alphabet = "abcdefghijklmnopqrstuvwxyz.0".split("");
     return (
         <>
             <div className="wrapper">

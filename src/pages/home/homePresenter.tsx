@@ -68,6 +68,22 @@ export const HomePresenter: React.FC = () => {
                                     <li><BasicLink href="https://www.youtube.com/watch?v=YpfpN9iX2WA" additionalClassNames="button">View on Youtube</BasicLink></li>
                                 </ul>
                             </div>
+                            <div className="col-4 col-12-medium">
+                                <span className="image fit"><img src="assets/img/nmsMessage.jpg" alt="" /></span>
+                                <h3>@NoMansSky</h3>
+                                <p>NMS tweeted a longer sentence, giving us a few missing characters!</p>
+                                <ul className="actions special">
+                                    <li><BasicLink href="https://twitter.com/NoMansSky/status/1395371596764876808" additionalClassNames="button">View on Twitter</BasicLink></li>
+                                </ul>
+                            </div>
+                            <div className="col-4 col-12-medium">
+                                <span className="image fit"><img src="assets/img/jackpotninja.png" alt="" /></span>
+                                <h3>@JackPotNinja1</h3>
+                                <p>JackPotNinja getting us the letter V and possibl 9 &amp; 0</p>
+                                <ul className="actions special">
+                                    <li><BasicLink href="https://twitter.com/JackPotNinja1/status/1395378352140214276" additionalClassNames="button">View on Twitter</BasicLink></li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                 </section>
