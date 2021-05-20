@@ -79,7 +79,7 @@ export const HomePresenter: React.FC = () => {
                             <div className="col-4 col-12-medium">
                                 <span className="image fit"><img src="assets/img/jackpotninja.png" alt="" /></span>
                                 <h3>@JackPotNinja1</h3>
-                                <p>JackPotNinja getting us the letter V and possibl 9 &amp; 0</p>
+                                <p>JackPotNinja getting us the letter V and possibly 9 &amp; 0</p>
                                 <ul className="actions special">
                                     <li><BasicLink href="https://twitter.com/JackPotNinja1/status/1395378352140214276" additionalClassNames="button">View on Twitter</BasicLink></li>
                                 </ul>
