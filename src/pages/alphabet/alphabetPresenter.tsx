@@ -24,7 +24,7 @@ export const AlphabetPresenter: React.FC<IProps> = (props: IProps) => {
         imageClass = 'tiny';
     }
 
-    const alphabet = "abcdefghijklmnopqrstuvwxyz".split("");
+    const alphabet = "abcdefghijklmnopqrstuvwxyz.".split("");
     return (
         <>
             <div className="wrapper">
@@ -38,6 +38,7 @@ export const AlphabetPresenter: React.FC<IProps> = (props: IProps) => {
                     <div className="alphabet-grid">
                         {
                             alphabet.map((char: string) => {
+                                if (char === '.') char = 'period';
                                 return (
                                     <div
                                         key={`all-${char}`}
