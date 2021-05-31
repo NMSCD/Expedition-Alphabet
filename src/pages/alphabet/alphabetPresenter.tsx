@@ -94,6 +94,7 @@ export const AlphabetPresenter: React.FC<IProps> = (props: IProps) => {
                         <ul>
                             <li style={{ display: 'block' }}><BasicLink href={site.nmsassistant.twitter} additionalClassNames="mt1">@AssistantNMS</BasicLink></li>
                             <li style={{ display: 'block' }}><BasicLink href="https://twitter.com/RayReynoldsNMS" additionalClassNames="mt1">@RayReynoldsNMS</BasicLink></li>
+                            <li style={{ display: 'block' }}><BasicLink href="https://twitter.com/Ja77Punk" additionalClassNames="mt1">@Ja77Punk</BasicLink></li>
                         </ul>
                     </div>
                 </section>

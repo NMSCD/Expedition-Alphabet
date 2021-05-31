@@ -1,4 +1,3 @@
 <svg viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg" fill="transparent">
-	<rect x="5" y="20" width="15" height="35" stroke="#000000" fill="#000000" />
-	<path d="M20.8 20.5 L40 40 L40 50 L30 50 L20 40 Z" stroke="#000000" fill="#000000" />
+	<path d="M5 20 L20 20 L40 40 L40 50 L30 50 L20 40 L20 50 L5 50 Z" stroke="#000000" fill="#000000" />
 </svg>
