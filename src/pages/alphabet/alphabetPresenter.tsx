@@ -64,6 +64,7 @@ export const AlphabetPresenter: React.FC<IProps> = (props: IProps) => {
                             {
                                 (props.typedChars ?? []).map((char: string, index: number) => {
                                     if (char === ' ') char = 'space';
+                                    if (char === ':') char = 'colon';
 
                                     return (
                                         <BasicImage
