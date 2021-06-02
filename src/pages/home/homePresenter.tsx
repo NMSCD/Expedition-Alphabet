@@ -84,6 +84,14 @@ export const HomePresenter: React.FC = () => {
                                     <li><BasicLink href="https://twitter.com/JackPotNinja1/status/1395378352140214276" additionalClassNames="button">View on Twitter</BasicLink></li>
                                 </ul>
                             </div>
+                            <div className="col-4 col-12-medium">
+                                <span className="image fit"><img src="assets/img/captStevePanel.jpg" alt="" /></span>
+                                <h3>@NCaptainsteve</h3>
+                                <p>Captain Steve sharing a screenshot from update 3.5</p>
+                                <ul className="actions special">
+                                    <li><BasicLink href="https://twitter.com/NCaptainsteve/status/1400042909546782721" additionalClassNames="button">View on Twitter</BasicLink></li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                 </section>
