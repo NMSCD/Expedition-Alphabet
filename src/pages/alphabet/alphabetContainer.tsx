@@ -17,8 +17,6 @@ export class AlphabetContainer extends React.Component<IProps, IState> {
     }
 
     updateTypedChars = (newChar: string) => {
-        console.log(newChar)
-        if (newChar == null || newChar.length < 1) return;
         this.setState({
             typedChars: newChar.split(''),
         });

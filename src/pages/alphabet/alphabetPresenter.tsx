@@ -15,8 +15,13 @@ export const AlphabetPresenter: React.FC<IProps> = (props: IProps) => {
     const onChange = (e: any) => {
         const target = e.target ?? {};
         const value = target?.value ?? '';
-
+        debugger;
         props?.updateTypedChars?.(value);
+    }
+
+    const onImageClick = (character: string) => () => {
+        const newText = props.typedChars.join('') + character;
+        props?.updateTypedChars?.(newText);
     }
 
     let imageClass = 'small';
@@ -38,19 +43,21 @@ export const AlphabetPresenter: React.FC<IProps> = (props: IProps) => {
                     <div className="alphabet-grid">
                         {
                             alphabet.map((char: string) => {
-                                if (char === '.') char = 'period';
-                                if (char === ':') char = 'colon';
+                                let displayChar = char;
+                                if (char === '.') displayChar = 'period';
+                                if (char === ':') displayChar = 'colon';
                                 return (
                                     <div
                                         key={`all-${char}`}
-                                        className="alphabet-block no-select"
+                                        className="alphabet-block pointer no-select"
+                                        onClick={onImageClick(char)}
                                     >
-                                        <p>{char}</p>
+                                        <p>{displayChar}</p>
                                         <BasicImage
-                                            imageUrl={`/expedition-alphabet/assets/img/alphabet/${char}.svg`}
+                                            imageUrl={`/expedition-alphabet/assets/img/alphabet/${displayChar}.svg`}
                                             fallbackSrc={`/expedition-alphabet/${AppImage.unknownImage}`}
                                             classNames="alphabet"
-                                            imageName={char}
+                                            imageName={displayChar}
                                         />
                                     </div>
                                 );
@@ -84,6 +91,7 @@ export const AlphabetPresenter: React.FC<IProps> = (props: IProps) => {
                                 type="text" id="sentence" name="sentence"
                                 style={{ width: '80%', margin: '0 auto' }}
                                 placeholder="Secret text..."
+                                value={props.typedChars.join('')}
                                 onChange={onChange}
                             />
                         </div>
