@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/expedition-alphabet/static/css/main.919ad3b3.chunk.css",
-    "main.js": "/expedition-alphabet/static/js/main.2bb7234d.chunk.js",
-    "main.js.map": "/expedition-alphabet/static/js/main.2bb7234d.chunk.js.map",
+    "main.css": "/expedition-alphabet/static/css/main.71eed545.chunk.css",
+    "main.js": "/expedition-alphabet/static/js/main.8fe3843e.chunk.js",
+    "main.js.map": "/expedition-alphabet/static/js/main.8fe3843e.chunk.js.map",
     "runtime-main.js": "/expedition-alphabet/static/js/runtime-main.025d1331.js",
     "runtime-main.js.map": "/expedition-alphabet/static/js/runtime-main.025d1331.js.map",
     "static/js/2.2e64ebd8.chunk.js": "/expedition-alphabet/static/js/2.2e64ebd8.chunk.js",
     "static/js/2.2e64ebd8.chunk.js.map": "/expedition-alphabet/static/js/2.2e64ebd8.chunk.js.map",
     "index.html": "/expedition-alphabet/index.html",
-    "static/css/main.919ad3b3.chunk.css.map": "/expedition-alphabet/static/css/main.919ad3b3.chunk.css.map",
+    "static/css/main.71eed545.chunk.css.map": "/expedition-alphabet/static/css/main.71eed545.chunk.css.map",
     "static/js/2.2e64ebd8.chunk.js.LICENSE.txt": "/expedition-alphabet/static/js/2.2e64ebd8.chunk.js.LICENSE.txt",
     "static/media/main.scss": "/expedition-alphabet/static/media/overlay4.c2ffd603.svg",
     "static/media/custom.scss": "/expedition-alphabet/static/media/nmsBackground.fa253c0e.jpg"
@@ -16,7 +16,7 @@
   "entrypoints": [
     "static/js/runtime-main.025d1331.js",
     "static/js/2.2e64ebd8.chunk.js",
-    "static/css/main.919ad3b3.chunk.css",
-    "static/js/main.2bb7234d.chunk.js"
+    "static/css/main.71eed545.chunk.css",
+    "static/js/main.8fe3843e.chunk.js"
   ]
 }
