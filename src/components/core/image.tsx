@@ -13,6 +13,7 @@ interface IProps {
     imageName?: string;
     classNames?: string;
     style?: any;
+    onClick?: (e?: any) => void;
 }
 
 export class BasicImage extends React.Component<IProps, IState> {
@@ -45,6 +46,7 @@ export class BasicImage extends React.Component<IProps, IState> {
                 className={classNames(this.props.classNames, { 'error': errored })}
                 style={this.props.style}
                 onError={this.onError}
+                onClick={this.props.onClick}
                 alt={(this.props.alt ?? this.props.imageName) ?? 'Emote button'}
                 draggable={false}
             />

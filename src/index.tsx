@@ -5,6 +5,8 @@ import { App } from './App';
 
 import './scss/main.scss';
 import './scss/custom.scss';
+import 'react-tippy/dist/tippy.css';
+import 'react-image-lightbox/style.css';
 
 ReactDOM.render(
   <React.StrictMode>

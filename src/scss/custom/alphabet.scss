@@ -23,6 +23,7 @@
 }
 
 .alphabet-block {
+    position: relative;
     border: 3px rgba(0, 0, 0, 0.15) dashed;
     border-radius: 10px;
 
@@ -35,6 +36,26 @@
 
     img {
         margin: 10px 0;
+    }
+
+
+    .view-usage {
+        position: absolute;
+        top: 0.15em;
+        right: 0.2em;
+        opacity: 0;
+        transition: opacity 250ms ease-in-out;
+
+        img {
+            margin: 0;
+        }
+    }
+
+
+    &:hover {
+        .view-usage {
+            opacity: 1;
+        }
     }
 }
 
