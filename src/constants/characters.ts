@@ -30,7 +30,7 @@ export const alphabetCharacters = [
     { name: '0', img: '/expedition-alphabet/assets/img/alphabet/0.svg' },
     { name: '1', img: '/expedition-alphabet/assets/img/alphabet/1.svg' },
     { name: '3', img: '/expedition-alphabet/assets/img/alphabet/3.svg' },
-    { name: '9️⃣', display: '?', unknown: true, img: '/expedition-alphabet/assets/img/alphabet/9.svg' },
+    { name: '9', img: '/expedition-alphabet/assets/img/alphabet/9.svg' },
     { name: '🥩', display: '?', unknown: true, img: '/expedition-alphabet/assets/img/alphabet/unknown1.svg' },
     { name: '🥐', display: '?', unknown: true, img: '/expedition-alphabet/assets/img/alphabet/unknown2.svg' },
 ];
