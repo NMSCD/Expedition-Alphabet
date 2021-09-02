@@ -11,8 +11,6 @@ import { Tooltip } from '../../components/core/tooltip';
 import { LightBox } from '../../components/core/lightbox';
 import { Footer } from '../../components/common/footer';
 
-import { mapFromDigitToName, mapFromNameToDigit } from '../../helper/charHelper';
-
 interface IProps {
     typedChars: Array<string>;
     updateTypedChars: (newChar: string) => void;
@@ -24,7 +22,6 @@ export const AlphabetPresenter: React.FC<IProps> = (props: IProps) => {
     const onChange = (e: any) => {
         const target = e.target ?? {};
         const value = target?.value ?? '';
-        debugger;
         props?.updateTypedChars?.(value);
     }
 
@@ -36,14 +33,10 @@ export const AlphabetPresenter: React.FC<IProps> = (props: IProps) => {
     const tooltipClick = (character: string) => () => {
         const imagesToShow = [];
         for (const imageUses of AppImage.usage) {
-            const charsForImage = imageUses.translation.replace(/ /g, '').split('');
-            const char = mapFromNameToDigit(character);
-            if (charsForImage.includes(char)) {
+            if (imageUses.translation.replace(/ /g, '').includes(character)) {
                 imagesToShow.push(imageUses.image);
             }
         }
-
-        debugger;
 
         if (imagesToShow.length > 0) {
             setImages(imagesToShow);
@@ -74,31 +67,30 @@ export const AlphabetPresenter: React.FC<IProps> = (props: IProps) => {
                     </div>
                 </section>
                 <section className="main style1">
-                    <p style={{ textAlign: 'center', fontStyle: 'italic' }}>Hover over a character and click on the quiestion icon to view the places we got the characters from</p>
+                    <p style={{ textAlign: 'center', fontStyle: 'italic' }}>Hover over a character and click on the question icon to view the places we got the characters from</p>
                     <div className="alphabet-grid">
                         {
-                            alphabetCharacters.map((char: string) => {
-                                const displayChar = mapFromDigitToName(char);
+                            alphabetCharacters.map((charObj: any) => {
                                 return (
                                     <div
-                                        key={`all-${char}`}
+                                        key={`all-${charObj.name}`}
                                         className="alphabet-block no-select"
                                     >
-                                        <p>{displayChar}</p>
+                                        <p>{charObj.display ?? charObj.name}</p>
                                         <BasicImage
-                                            imageUrl={`/expedition-alphabet/assets/img/alphabet/${displayChar}.svg`}
+                                            imageUrl={charObj.img}
                                             fallbackSrc={`/expedition-alphabet/${AppImage.unknownImage}`}
                                             classNames="alphabet pointer"
-                                            imageName={displayChar}
-                                            onClick={onImageClick(char)}
+                                            imageName={charObj.display ?? charObj.name}
+                                            onClick={onImageClick(charObj.unknown === true ? '?' : charObj.name)}
                                         />
                                         <Tooltip content="View usage" classNames="view-usage">
                                             <BasicImage
                                                 imageUrl={`/expedition-alphabet/assets/img/uses.png`}
                                                 fallbackSrc={`/expedition-alphabet/${AppImage.unknownImage}`}
                                                 classNames="tiny pointer"
-                                                imageName={displayChar}
-                                                onClick={tooltipClick(char)}
+                                                imageName={charObj.display ?? charObj.name}
+                                                onClick={tooltipClick(charObj.name)}
                                             />
                                         </Tooltip>
                                     </div>
@@ -138,15 +130,15 @@ export const AlphabetPresenter: React.FC<IProps> = (props: IProps) => {
                             <p>Type something!</p>
                             {
                                 (props.typedChars ?? []).map((char: string, index: number) => {
-                                    const displayChar = mapFromDigitToName(char);
+                                    const displayChar = alphabetCharacters.find(a => (a.display ?? a.name) === char && a.unknown !== true);
 
                                     return (
                                         <BasicImage
-                                            key={`typed-${displayChar}-${index}`}
+                                            key={`typed-${displayChar?.name}-${index}`}
                                             classNames={imageClass}
-                                            imageUrl={`/expedition-alphabet/assets/img/alphabet/${displayChar.toLowerCase()}.svg`}
+                                            imageUrl={displayChar?.img ?? `/expedition-alphabet/${AppImage.unknownImage}`}
                                             fallbackSrc={`/expedition-alphabet/${AppImage.unknownImage}`}
-                                            imageName={displayChar}
+                                            imageName={displayChar?.name ?? 'unknown'}
                                         />
                                     );
                                 })

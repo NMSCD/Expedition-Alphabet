@@ -23,7 +23,7 @@ export class AppImage {
         },
         {
             image: 'assets/img/usage/eggSequencerTank-solved.jpg',
-            translation: 'korvet 0 treat your egg to a fresh pair of genes',
+            translation: 'korvet 9️⃣ 0 treat your egg to a fresh pair of genes',
         },
         {
             image: 'assets/img/usage/eggSequencer-solved.jpg',
@@ -32,6 +32,14 @@ export class AppImage {
         {
             image: 'assets/img/usage/goldenGekHelmet-solved.png',
             translation: 'season f 1st',
+        },
+        {
+            image: 'assets/img/usage/atlasRace-solved.png',
+            translation: '3 rd 9️⃣ atlas race',
+        },
+        {
+            image: 'assets/img/usage/callNum-solved.png',
+            translation: 'call 0 🥩🥐',
         },
     ]
 }
