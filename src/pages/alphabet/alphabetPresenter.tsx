@@ -150,6 +150,7 @@ export const AlphabetPresenter: React.FC<IProps> = (props: IProps) => {
                             <li style={{ display: 'block' }}><BasicLink href="https://twitter.com/JackPotNinja1" additionalClassNames="mt1">@JackPotNinja1</BasicLink></li>
                             <li style={{ display: 'block' }}><BasicLink href="https://twitter.com/Ja77Punk" additionalClassNames="mt1">@Ja77Punk</BasicLink></li>
                         </ul>
+                        <p>Or talk about the alphabet in the <a href="https://forums.atlas-65.com/t/expeditions-alphabet/7618" target="_blank" rel="noopener noreferrer">Atlas forum</a></p>
                     </div>
                 </section>
             </div>
