@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import Swal from 'sweetalert2';
 
 import { AppImage } from '../../constants/appImage';
-import { alphabetCharacters, unknownAlphabetCharacters } from '../../constants/characters';
+import { alphabetCharacters, additionalAlphabetCharacters } from '../../constants/characters';
 import { site } from '../../constants/site';
 
 import { BasicLink } from '../../components/core/link';
@@ -97,24 +97,6 @@ export const AlphabetPresenter: React.FC<IProps> = (props: IProps) => {
                                 );
                             })
                         }
-                        {
-                            unknownAlphabetCharacters.map((unknown: any) => {
-                                return (
-                                    <div
-                                        key={`unknown-${unknown.name}-${unknown.img}`}
-                                        className="alphabet-block no-select"
-                                    >
-                                        <p>{unknown.name}</p>
-                                        <BasicImage
-                                            imageUrl={unknown.img}
-                                            fallbackSrc={`/expedition-alphabet/${AppImage.unknownImage}`}
-                                            classNames="alphabet"
-                                            imageName="unknown"
-                                        />
-                                    </div>
-                                );
-                            })
-                        }
                     </div>
                 </section>
                 {
@@ -130,7 +112,10 @@ export const AlphabetPresenter: React.FC<IProps> = (props: IProps) => {
                             <p>Type something!</p>
                             {
                                 (props.typedChars ?? []).map((char: string, index: number) => {
-                                    const displayChar = alphabetCharacters.find(a => (a.display ?? a.name) === char && a.unknown !== true);
+                                    let displayChar = alphabetCharacters.find(a => (a.display ?? a.name) === char.toLocaleLowerCase() && a.unknown !== true);
+                                    if (char === ' ') {
+                                        displayChar = additionalAlphabetCharacters.space;
+                                    }
 
                                     return (
                                         <BasicImage

@@ -25,15 +25,22 @@ export const alphabetCharacters = [
     { name: 'x', img: '/expedition-alphabet/assets/img/alphabet/x.svg' },
     { name: 'y', img: '/expedition-alphabet/assets/img/alphabet/y.svg' },
     { name: 'z', img: '/expedition-alphabet/assets/img/alphabet/z.svg' },
-    { name: '.', display: 'Period', img: '/expedition-alphabet/assets/img/alphabet/period.svg' },
-    { name: ':', display: 'Colon', img: '/expedition-alphabet/assets/img/alphabet/colon.svg' },
     { name: '0', img: '/expedition-alphabet/assets/img/alphabet/0.svg' },
     { name: '1', img: '/expedition-alphabet/assets/img/alphabet/1.svg' },
+    { name: '2', img: '/expedition-alphabet/assets/img/alphabet/2.svg' },
     { name: '3', img: '/expedition-alphabet/assets/img/alphabet/3.svg' },
+    { name: '4', img: '/expedition-alphabet/assets/img/alphabet/4.svg' },
+    { name: '5', img: '/expedition-alphabet/assets/img/alphabet/5.svg' },
+    { name: '6', img: '/expedition-alphabet/assets/img/alphabet/6.svg' },
+    { name: '7', img: '/expedition-alphabet/assets/img/alphabet/7.svg' },
+    { name: '8', img: '/expedition-alphabet/assets/img/alphabet/8.svg' },
     { name: '9', img: '/expedition-alphabet/assets/img/alphabet/9.svg' },
+    { name: '.', display: 'Period', img: '/expedition-alphabet/assets/img/alphabet/period.svg' },
+    { name: ':', display: 'Colon', img: '/expedition-alphabet/assets/img/alphabet/colon.svg' },
     { name: '🥩', display: '?', unknown: true, img: '/expedition-alphabet/assets/img/alphabet/unknown1.svg' },
     { name: '🥐', display: '?', unknown: true, img: '/expedition-alphabet/assets/img/alphabet/unknown2.svg' },
 ];
 
-export const unknownAlphabetCharacters = [
-];
+export const additionalAlphabetCharacters = {
+    space: { name: 'space', img: '/expedition-alphabet/assets/img/alphabet/space.svg' },
+};

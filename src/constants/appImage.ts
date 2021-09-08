@@ -23,7 +23,7 @@ export class AppImage {
         },
         {
             image: 'assets/img/usage/eggSequencerTank.png',
-            translation: 'korvet 90 treat your egg to a fresh pair of genes',
+            translation: 'korvet 20 treat your egg to a fresh pair of genes',
         },
         {
             image: 'assets/img/usage/eggSequencer.png',
@@ -35,11 +35,15 @@ export class AppImage {
         },
         {
             image: 'assets/img/usage/atlasRace.png',
-            translation: '93 rd atlas race',
+            translation: '23 rd atlas race',
         },
         {
             image: 'assets/img/usage/callNum.png',
             translation: 'call 0 🥩🥐',
+        },
+        {
+            image: 'assets/img/usage/entireAlphabet.png',
+            translation: '0987654321qwertyuiopasdfghjklzxcvbnm,.?',
         },
     ]
 }
