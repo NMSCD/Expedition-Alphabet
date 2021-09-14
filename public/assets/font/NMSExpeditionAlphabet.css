@@ -1,0 +1,10 @@
+@font-face {
+    font-family: 'NMSExpeditionAlphabet';
+    src: url('NMSExpeditionAlphabet.eot'); /* IE9 Compat Modes */
+    src: url('NMSExpeditionAlphabet.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('NMSExpeditionAlphabet.woff') format('woff'), /* Modern Browsers */
+         url('NMSExpeditionAlphabet.ttf') format('truetype'); /* Safari, Android, iOS */
+             font-style: normal;
+    font-weight: normal;
+    text-rendering: optimizeLegibility;
+}
