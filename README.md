@@ -21,7 +21,7 @@ Thanks to Github Pages, the fonts are readily available to be integrated into yo
 
 ```css
 /* font-family: NMSExpeditionAlphabet */
-@import url('https://nmscd.github.io/expedition-alphabet/assets/font/NMSExpeditionAlphabet.css');
+@import url('https://raw.githubusercontent.com/NMSCD/expedition-alphabet/master/public/assets/font/NMSExpeditionAlphabet.css');
 
 ```
 
