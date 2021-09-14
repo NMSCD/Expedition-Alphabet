@@ -12,6 +12,9 @@ This site was inspired by @RayReynolds tweet. Please feel free to contact us on 
 
 # Use the Expedition Alphabet as a font!
 
+
+![FontExample](public/assets/font/example.png)
+
 ### Using the fonts on your sites
 Thanks to Github Pages, the fonts are readily available to be integrated into your sites by simply importing the relevant CSS files into them. Here is a quick and easy way toget started:
 
