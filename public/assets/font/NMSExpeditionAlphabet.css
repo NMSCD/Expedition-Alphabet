@@ -8,3 +8,7 @@
     font-weight: normal;
     text-rendering: optimizeLegibility;
 }
+
+* {
+  font-family: NMSExpeditionAlphabet, Helvetica, sans-serif !important;
+}
