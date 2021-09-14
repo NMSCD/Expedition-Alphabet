@@ -22,5 +22,6 @@ Thanks to Github Pages, the fonts are readily available to be integrated into yo
 
 ```
 
+<br />
 
 ![NMSCD-Banner](https://github.com/NMSCD/About/raw/master/banner/current-small.png)
