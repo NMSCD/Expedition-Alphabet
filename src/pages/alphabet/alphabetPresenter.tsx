@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import Swal from 'sweetalert2';
 
 import { AppImage } from '../../constants/appImage';
-import { alphabetCharacters, additionalAlphabetCharacters } from '../../constants/characters';
+import { alphabetCharacters, additionalAlphabetCharacters, keyboardDropdownOpts } from '../../constants/characters';
 import { site } from '../../constants/site';
 
 import { BasicLink } from '../../components/core/link';
@@ -13,11 +13,15 @@ import { Footer } from '../../components/common/footer';
 
 interface IProps {
     typedChars: Array<string>;
+    alphabetCharacters: Array<any>;
     updateTypedChars: (newChar: string) => void;
+    changeCharacterOrder: (selectEvent: any) => void;
 }
 
 export const AlphabetPresenter: React.FC<IProps> = (props: IProps) => {
     const [images, setImages] = useState<Array<string>>([]);
+
+    console.log(props.alphabetCharacters)
 
     const onChange = (e: any) => {
         const target = e.target ?? {};
@@ -66,11 +70,25 @@ export const AlphabetPresenter: React.FC<IProps> = (props: IProps) => {
                         <p>Currently <s>known</s> guessed alphabet</p>
                     </div>
                 </section>
-                <section className="main style1">
+                <section className="main style1 no-padding ta-center">
+                    <div className="keyboard" style={{ display: 'none' }}>
+                        <span>Keyboard Layout</span>
+                        <select id="keyboard-dropdown" onChange={props.changeCharacterOrder}>
+                            {
+                                keyboardDropdownOpts.map(keyOpts => {
+                                    return (
+                                        <option key={keyOpts.id} value={keyOpts.id}>
+                                            {keyOpts.name}
+                                        </option>
+                                    )
+                                })
+                            }
+                        </select>
+                    </div>
                     <p style={{ textAlign: 'center', fontStyle: 'italic' }}>Hover over a character and click on the question icon to view the places we got the characters from</p>
                     <div className="alphabet-grid">
                         {
-                            alphabetCharacters.map((charObj: any) => {
+                            props.alphabetCharacters.map((charObj: any) => {
                                 return (
                                     <div
                                         key={`all-${charObj.name}`}

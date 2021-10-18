@@ -6,17 +6,22 @@
     grid-auto-rows: minmax(50px, auto);
 
     @media only screen and (max-width: 1000px) {
-        grid-template-columns: repeat(8, 1fr);
+        grid-template-columns: repeat(10, 1fr);
+        margin: 0 1em;
+    }
+
+    @media only screen and (max-width: 850px) {
+        grid-template-columns: repeat(9, 1fr);
         margin: 0 1em;
     }
 
     @media only screen and (max-width: 700px) {
-        grid-template-columns: repeat(6, 1fr);
+        grid-template-columns: repeat(8, 1fr);
         margin: 0 0.5em;
     }
 
     @media only screen and (max-width: 500px) {
-        grid-template-columns: repeat(4, 1fr);
+        grid-template-columns: repeat(8, 1fr);
         margin: 0;
         margin-bottom: 1em;
     }
@@ -85,4 +90,17 @@
 .alphabet-selectedLetter {
     background-color: #eed9cb;
     border-radius: 50%;
+}
+
+.keyboard {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1em;
+
+    #keyboard-dropdown {
+        max-width: 500px;
+        margin-left: 1em;
+    }
 }

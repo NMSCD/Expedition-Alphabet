@@ -37,10 +37,37 @@ export const alphabetCharacters = [
     { name: '9', img: '/expedition-alphabet/assets/img/alphabet/9.svg' },
     { name: '.', display: 'Period', img: '/expedition-alphabet/assets/img/alphabet/period.svg' },
     { name: ':', display: 'Colon', img: '/expedition-alphabet/assets/img/alphabet/colon.svg' },
+    { name: ' ', display: 'Space', img: '/expedition-alphabet/assets/img/alphabet/space.svg' },
     { name: '🥩', display: '?', unknown: true, img: '/expedition-alphabet/assets/img/alphabet/unknown1.svg' },
     { name: '🥐', display: '?', unknown: true, img: '/expedition-alphabet/assets/img/alphabet/unknown2.svg' },
 ];
 
 export const additionalAlphabetCharacters = {
-    space: { name: 'space', img: '/expedition-alphabet/assets/img/alphabet/space.svg' },
+    space: { name: 'Space', img: '/expedition-alphabet/assets/img/alphabet/space.svg' },
 };
+
+const keyLayouts = {
+    other: ['.', ':', ' ', '🥩', '🥐'],
+    numbers: ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'],
+    alphabetical: ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'],
+    qwerty: ['q', 'w', 'e', 'r', 't', 'y', 'u', 'i', 'o', 'p', '[', ']', 'a', 's', 'd', 'f', 'g', 'h', 'j', 'k', 'l', ';', '\'', '\\', 'z', 'x', 'c', 'v', 'b', 'n', 'm', ',', '.', '/'],
+    dvorak: [',', '.', 'p', 'y', 'f', 'g', 'c', 'r', 'l', '?', 'a', 'o', 'e', 'u', 'i', 'd', 'h', 't', 'n', 's', 'q', 'j', 'k', 'x', 'b', 'm', 'w', 'v', 'z'],
+}
+
+export const keyboardDropdownOpts = [
+    {
+        id: 'alphabet',
+        name: 'Alphabetical',
+        layout: [...keyLayouts.alphabetical, ...keyLayouts.numbers, ...keyLayouts.other],
+    },
+    {
+        id: 'qwerty',
+        name: 'QWERTY',
+        layout: [...keyLayouts.qwerty, ...keyLayouts.numbers, ...keyLayouts.other],
+    },
+    {
+        id: 'dvorak',
+        name: 'DVORAK',
+        layout: [...keyLayouts.dvorak, ...keyLayouts.numbers, ...keyLayouts.other],
+    },
+]

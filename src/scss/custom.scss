@@ -19,6 +19,15 @@
     margin-bottom: 1em;
 }
 
+.no-padding-h {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
+
+.ta-center {
+    text-align: center;
+}
+
 .no-select {
     -webkit-touch-callout: none;
     /* iOS Safari */
