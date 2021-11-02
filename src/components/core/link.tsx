@@ -8,6 +8,7 @@ import { site } from "../../constants/site";
 interface IProps {
     id?: string;
     href: string;
+    title?: string;
     onClick?: () => void;
     additionalClassNames?: string;
     children?: ReactNode;
@@ -48,6 +49,7 @@ export const BasicInternalLink = (props: IProps) => {
     return (
         <Link
             to={props.href}
+            title={props.title}
             className={classNames(props.additionalClassNames ?? '')}
             draggable={false}>
             {props.children}

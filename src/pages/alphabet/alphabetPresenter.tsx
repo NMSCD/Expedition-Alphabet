@@ -21,8 +21,6 @@ interface IProps {
 export const AlphabetPresenter: React.FC<IProps> = (props: IProps) => {
     const [images, setImages] = useState<Array<string>>([]);
 
-    console.log(props.alphabetCharacters)
-
     const onChange = (e: any) => {
         const target = e.target ?? {};
         const value = target?.value ?? '';
