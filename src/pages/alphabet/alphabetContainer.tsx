@@ -1,21 +1,37 @@
 import React from 'react';
-import { alphabetCharacters, keyboardDropdownOpts } from '../../constants/characters';
+import { withRouter } from 'react-router-dom';
 
+import { alphabetCharacters, keyboardDropdownOpts } from '../../constants/characters';
 import { AlphabetPresenter } from './alphabetPresenter';
+
+const queryString = require('query-string');
 
 interface IState {
     typedChars: Array<string>;
     alphabetCharacters: Array<any>;
 }
 
-interface IProps { }
+interface IProps {
+    location: any;
+    history: any;
+    match: any;
+}
 
-export class AlphabetContainer extends React.Component<IProps, IState> {
+class AlphabetContainerUnconnected extends React.Component<IProps, IState> {
     constructor(props: IProps) {
         super(props);
         this.state = {
             typedChars: [],
             alphabetCharacters: this.getCharObjsFromKeyboardId(keyboardDropdownOpts[0].id),
+        }
+    }
+
+    componentDidMount() {
+        const parsed = queryString.parse(this.props.location?.search ?? '');
+        if (parsed.text != null) {
+            this.setState({
+                typedChars: parsed.text.split(''),
+            });
         }
     }
 
@@ -58,3 +74,5 @@ export class AlphabetContainer extends React.Component<IProps, IState> {
         );
     }
 }
+
+export const AlphabetContainer = (withRouter(AlphabetContainerUnconnected));
