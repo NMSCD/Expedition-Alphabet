@@ -17,7 +17,7 @@ export const site = {
     nmscd: {
         fullName: 'No Man\'s Sky Community Developers',
         nickName: 'NMSCD',
-        website: 'https://nmscd.github.io/',
+        website: 'https://www.nmscd.com/',
         github: 'https://github.com/NMSCD',
     },
     assistantApps: {
