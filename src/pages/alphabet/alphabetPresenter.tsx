@@ -137,8 +137,8 @@ export const AlphabetPresenter: React.FC<IProps> = (props: IProps) => {
                                         <BasicImage
                                             key={`typed-${displayChar?.name}-${index}`}
                                             classNames={imageClass}
-                                            imageUrl={displayChar?.img ?? `/expedition-alphabet/${AppImage.unknownImage}`}
-                                            fallbackSrc={`/expedition-alphabet/${AppImage.unknownImage}`}
+                                            imageUrl={displayChar?.img ?? `/${AppImage.unknownImage}`}
+                                            fallbackSrc={`/${AppImage.unknownImage}`}
                                             imageName={displayChar?.name ?? 'unknown'}
                                         />
                                     );
