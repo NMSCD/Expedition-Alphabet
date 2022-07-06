@@ -95,15 +95,15 @@ export const AlphabetPresenter: React.FC<IProps> = (props: IProps) => {
                                         <p>{charObj.display ?? charObj.name}</p>
                                         <BasicImage
                                             imageUrl={charObj.img}
-                                            fallbackSrc={`/expedition-alphabet/${AppImage.unknownImage}`}
+                                            fallbackSrc={`/${AppImage.unknownImage}`}
                                             classNames="alphabet pointer"
                                             imageName={charObj.display ?? charObj.name}
                                             onClick={onImageClick(charObj.unknown === true ? '?' : charObj.name)}
                                         />
                                         <Tooltip content="View usage" classNames="view-usage">
                                             <BasicImage
-                                                imageUrl={`/expedition-alphabet/assets/img/uses.png`}
-                                                fallbackSrc={`/expedition-alphabet/${AppImage.unknownImage}`}
+                                                imageUrl={`/assets/img/uses.png`}
+                                                fallbackSrc={`/${AppImage.unknownImage}`}
                                                 classNames="tiny pointer"
                                                 imageName={charObj.display ?? charObj.name}
                                                 onClick={tooltipClick(charObj.name)}
