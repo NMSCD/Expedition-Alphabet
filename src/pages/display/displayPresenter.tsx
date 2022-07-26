@@ -1,9 +1,6 @@
 import React, { useEffect, useState } from 'react';
 
 import * as route from '../../constants/route';
-import { AppImage } from '../../constants/appImage';
-import { alphabetCharacters, additionalAlphabetCharacters } from '../../constants/characters';
-import { BasicImage } from '../../components/core/image';
 import { Footer } from '../../components/common/footer';
 import { withRouter } from 'react-router-dom';
 import { BasicInternalLink } from '../../components/core/link';
@@ -34,11 +31,6 @@ const DisplayPresenterUnconnected: React.FC<IProps> = (props: IProps) => {
         setText?.(value);
     }
 
-    let imageClass = 'small';
-    if (text.length > 15) {
-        imageClass = 'tiny';
-    }
-
     return (
         <>
             <div className="wrapper">
@@ -50,24 +42,8 @@ const DisplayPresenterUnconnected: React.FC<IProps> = (props: IProps) => {
                 <section className="main style3" style={{ paddingTop: '4em' }}>
                     <div className="row">
                         <div className="col-12 ta-center mb1">
-                            {
-                                (text.split('') ?? []).map((char: string, index: number) => {
-                                    let displayChar = alphabetCharacters.find(a => (a.display ?? a.name) === char.toLocaleLowerCase() && a.unknown !== true);
-                                    if (char === ' ') {
-                                        displayChar = additionalAlphabetCharacters.space;
-                                    }
-
-                                    return (
-                                        <BasicImage
-                                            key={`typed-${displayChar?.name}-${index}`}
-                                            classNames={imageClass}
-                                            imageUrl={displayChar?.img ?? `/${AppImage.unknownImage}`}
-                                            fallbackSrc={`/${AppImage.unknownImage}`}
-                                            imageName={displayChar?.name ?? 'unknown'}
-                                        />
-                                    );
-                                })
-                            }
+                            <br />
+                            <span className="expedition-font">{text}</span>
                         </div>
                         <div className="col-12 ta-center">
                             <input
