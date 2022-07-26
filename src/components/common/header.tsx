@@ -12,7 +12,7 @@ export const Header: React.FC<IProps> = (props: IProps) => {
         <section id="header">
             <div className="inner">
                 <h1>No Man's Sky<br />Expedition alphabet</h1>
-                <p>Is there a secret alphabet in NMS?<br />Is HelloGames giving us pieces of the puzzle?</p>
+                <p>Want to encode and decode messages?<br />With this tool you can easily use the NMS Expedition Alphabet</p>
                 <ul className="special mt2">
                     <li><BasicInternalLink href={route.alphabet} additionalClassNames="primary button scrolly">Skip straight to alphabet</BasicInternalLink></li>
                 </ul>

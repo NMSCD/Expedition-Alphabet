@@ -10,6 +10,7 @@ import { BasicImage } from '../../components/core/image';
 import { Tooltip } from '../../components/core/tooltip';
 import { LightBox } from '../../components/core/lightbox';
 import { Footer } from '../../components/common/footer';
+import { DarkModeToggle } from '../../components/common/darkModeToggle';
 
 interface IProps {
     typedChars: Array<string>;
@@ -65,7 +66,7 @@ export const AlphabetPresenter: React.FC<IProps> = (props: IProps) => {
                 <section id="header">
                     <div className="inner">
                         <h1>Expedition alphabet</h1>
-                        <p>Currently <s>known</s> guessed alphabet</p>
+                        <p>Currently known alphabet</p>
                     </div>
                 </section>
                 <section className="main style1 no-padding ta-center">
@@ -172,6 +173,7 @@ export const AlphabetPresenter: React.FC<IProps> = (props: IProps) => {
             </div>
 
             <Footer />
+            <DarkModeToggle />
         </>
     );
 }

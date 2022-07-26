@@ -22,8 +22,8 @@ export const Footer: React.FC<IProps> = () => {
                     </div>
                     <div className="col-4 col-lg-12" style={{ textAlign: 'right' }}>
                         <ul className="icons">
-                            <li style={{ display: 'block' }}><BasicLink href={site.assistantApps.website} additionalClassNames="mt1">View Home page</BasicLink></li>
-                            <li style={{ display: 'block' }}><BasicLink href={site.assistantApps.github} additionalClassNames="mt1">View our Github Organisation</BasicLink></li>
+                            <li style={{ display: 'block' }}><BasicLink href={site.nmscd.website} additionalClassNames="mt1">View Home page</BasicLink></li>
+                            <li style={{ display: 'block' }}><BasicLink href={site.nmscd.github} additionalClassNames="mt1">View our Github Organisation</BasicLink></li>
                         </ul>
                     </div>
                     <div className="col-2 col-lg-12"></div>

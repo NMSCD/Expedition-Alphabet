@@ -7,6 +7,7 @@ import { BasicImage } from '../../components/core/image';
 import { Footer } from '../../components/common/footer';
 import { withRouter } from 'react-router-dom';
 import { BasicInternalLink } from '../../components/core/link';
+import { DarkModeToggle } from '../../components/common/darkModeToggle';
 
 const queryString = require('query-string');
 
@@ -88,6 +89,7 @@ const DisplayPresenterUnconnected: React.FC<IProps> = (props: IProps) => {
             </div>
 
             <Footer />
+            <DarkModeToggle />
         </>
     );
 }

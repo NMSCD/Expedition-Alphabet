@@ -4,6 +4,7 @@ import * as route from '../../constants/route';
 import { Header } from '../../components/common/header';
 import { Footer } from '../../components/common/footer';
 import { BasicInternalLink, BasicLink } from '../../components/core/link';
+import { DarkModeToggle } from '../../components/common/darkModeToggle';
 
 export const HomePresenter: React.FC = () => {
     return (
@@ -15,13 +16,15 @@ export const HomePresenter: React.FC = () => {
                         <div className="row gtr-150">
                             <div className="col-6 col-12-medium">
                                 <header className="major">
-                                    <h2>You are not the only one wondering...</h2>
+                                    <h2>Want to use this font in your own projects?</h2>
                                 </header>
-                                <p>This characters just work out too perfectly, with Pioneer we had repeating characters but Beachhead pretty much confirms that these characters line up.</p>
+                                <p>
+                                    Follow the instructions <a href="https://github.com/NMSCD/Expedition-Alphabet" title="Expedition Alphabet readme.md">here</a> to import the stylesheet and font files into your project 💪.
+                                </p>
                             </div>
                             <div className="col-6 col-12-medium imp-medium">
                                 <span className="image fit">
-                                    <img src="assets/img/rayReynoldsInspireTweet.jpg" alt="" />
+                                    <img src="assets/font/example.png" alt="" />
                                 </span>
                             </div>
                         </div>
@@ -31,7 +34,7 @@ export const HomePresenter: React.FC = () => {
                 <section id="currentInfo" className="main style2 special">
                     <div className="container">
                         <header className="major">
-                            <h2>What we have so far...</h2>
+                            <h2>Examples of where the font has been used</h2>
                         </header>
                         <div className="row gtr-150" style={{ justifyContent: 'center' }}>
                             <div className="col-4 col-12-medium">
@@ -101,14 +104,14 @@ export const HomePresenter: React.FC = () => {
                         <div className="row gtr-150">
                             <div className="col-6 col-12-medium imp-medium">
                                 <span className="image fit">
-                                    <img src="assets/img/currentlyGuessed.png" alt="" />
+                                    <img src="assets/img/currentlyKnown.png" alt="" />
                                 </span>
                             </div>
                             <div className="col-6 col-12-medium">
                                 <header className="major">
-                                    <h2>View currently <s>known</s> guessed alphabet</h2>
+                                    <h2>View currently known alphabet</h2>
                                 </header>
-                                <p>This is still a work in progress, we are mostly guessing what characters line up with the English alphabet.</p>
+                                <p>Thanks to the community we now know all the characters used in the Expedition Alphabet!</p>
 
                                 <ul className="actions special">
                                     <li><BasicInternalLink href={route.alphabet} additionalClassNames="button">View alphabet</BasicInternalLink></li>
@@ -120,6 +123,7 @@ export const HomePresenter: React.FC = () => {
 
                 <Footer />
             </div>
+            <DarkModeToggle />
         </>
     );
 }

@@ -1,0 +1,59 @@
+.darkmode-toggle {
+    position: fixed;
+    top: 1.5em;
+    right: 1em;
+
+    &:before {
+        content: '🌙';
+        color: rgb(175, 175, 0);
+        font-size: 2em;
+        padding: 0.25em 0.125em;
+        border-radius: 10px;
+        background-color: rgba(0, 0, 0, 0.4);
+        cursor: pointer;
+    }
+}
+
+.dark {
+    .darkmode-toggle {
+        &:before {
+            content: '☀';
+            padding: 0.25em 0.4em;
+        }
+    }
+
+    h2 {
+        color: rgb(215, 215, 215);
+    }
+
+    .main.style1,
+    .main.style2 {
+        background-color: rgb(25, 25, 25);
+        color: white;
+    }
+
+    .main.style3 {
+        background-color: rgb(44, 44, 44);
+        color: white;
+    }
+
+    .alphabet-block {
+        border-color: rgba(255, 255, 255, 0.35);
+    }
+
+    input[type="text"],
+    input[type="number"] {
+        background: rgba(0, 0, 0, 0.1);
+        background-color: #53575a;
+        color: #dddddd;
+    }
+
+    input[type="submit"]:not(.swal2-styled),
+    input[type="reset"]:not(.swal2-styled),
+    input[type="button"]:not(.swal2-styled),
+    button:not(.swal2-styled),
+    .button:not(.swal2-styled) {
+        color: rgb(227, 227, 227) !important;
+        box-shadow: inset 0 0 0 1px rgb(227, 227, 227);
+    }
+}

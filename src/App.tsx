@@ -8,18 +8,22 @@ import { HomePresenter } from './pages/home/homePresenter';
 import { AlphabetContainer } from './pages/alphabet/alphabetContainer';
 import { DisplayPresenter } from './pages/display/displayPresenter';
 
-interface IProps { }
+interface IProps {
+  darkMode: string;
+}
 
 export const App: React.FC<IProps> = (props: IProps) => {
   return (
-    <HashRouter>
-      <ScrollToTop>
-        <Switch>
-          <Route exact={true} path={route.home} component={HomePresenter} />
-          <Route path={route.alphabet} component={AlphabetContainer} />
-          <Route path={route.display} component={DisplayPresenter} />
-        </Switch>
-      </ScrollToTop>
-    </HashRouter>
+    <div id="app-wrapper" className={props.darkMode}>
+      <HashRouter>
+        <ScrollToTop>
+          <Switch>
+            <Route exact={true} path={route.home} component={HomePresenter} />
+            <Route path={route.alphabet} component={AlphabetContainer} />
+            <Route path={route.display} component={DisplayPresenter} />
+          </Switch>
+        </ScrollToTop>
+      </HashRouter>
+    </div>
   );
 }
