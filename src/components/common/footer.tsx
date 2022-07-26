@@ -18,7 +18,7 @@ export const Footer: React.FC<IProps> = () => {
                     </div>
                     <div className="col-2 col-lg-12"></div>
                     <div className="col-4 col-lg-12">
-                        <p>This site/app was designed by <BasicLink href={site.nmsassistant.website}>{site.nmsassistant.nickName}</BasicLink> as part of the collection of tools created by the <BasicLink href={site.nmscd.website}>{site.nmscd.fullName}</BasicLink></p>
+                        <p>This site was designed by <BasicLink href={site.nmsassistant.website}>{site.nmsassistant.nickName}</BasicLink> and the font was designed by <BasicLink href={site.seontonppa.website}>{site.seontonppa.nickName}</BasicLink> as part of the collection of tools created by the <br /><BasicLink href={site.nmscd.website}>{site.nmscd.fullName}</BasicLink></p>
                     </div>
                     <div className="col-4 col-lg-12" style={{ textAlign: 'right' }}>
                         <ul className="icons">

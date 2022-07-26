@@ -28,5 +28,9 @@ export const site = {
         github: 'https://assistantapps.com/github',
         discord: 'https://assistantapps.com/discord',
         patreon: 'https://www.patreon.com/AssistantApps',
+    },
+    seontonppa: {
+        nickName: 'seontonppa',
+        website: 'http://seontonppa.com',
     }
 }

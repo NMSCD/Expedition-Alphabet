@@ -1,10 +1,11 @@
 import React from 'react';
 
-import * as route from '../../constants/route';
-import { Header } from '../../components/common/header';
-import { Footer } from '../../components/common/footer';
-import { BasicInternalLink, BasicLink } from '../../components/core/link';
 import { DarkModeToggle } from '../../components/common/darkModeToggle';
+import { Footer } from '../../components/common/footer';
+import { Header } from '../../components/common/header';
+import { BasicInternalLink, BasicLink } from '../../components/core/link';
+import * as route from '../../constants/route';
+import { site } from '../../constants/site';
 
 export const HomePresenter: React.FC = () => {
     return (
@@ -19,8 +20,9 @@ export const HomePresenter: React.FC = () => {
                                     <h2>Want to use this font in your own projects?</h2>
                                 </header>
                                 <p>
-                                    Follow the instructions <a href="https://github.com/NMSCD/Expedition-Alphabet" title="Expedition Alphabet readme.md">here</a> to import the stylesheet and font files into your project 💪.
+                                    Follow the instructions <a href="https://github.com/NMSCD/Expedition-Alphabet" title="Expedition Alphabet readme.md">here</a> to import the stylesheet and font files into your project! 💪 Font designed by <BasicLink href={site.seontonppa.website}>{site.seontonppa.nickName}</BasicLink> 🎉
                                 </p>
+                                <BasicLink href="https://raw.githubusercontent.com/NMSCD/Expedition-Alphabet/main/public/assets/font/nms-alphabet.ttf" additionalClassNames="button">Download .ttf</BasicLink>
                             </div>
                             <div className="col-6 col-12-medium imp-medium">
                                 <span className="image fit">
