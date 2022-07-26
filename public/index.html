@@ -59,6 +59,20 @@
   <meta name="msapplication-TileColor" content="#3F51B5">
   <meta name="msapplication-config" content="/browserconfig.xml">
 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <style>
+    @font-face {
+      font-family: 'NMS Alphabet';
+      src: url('/assets/font/nms-alphabet.ttf') format('truetype');
+      font-style: normal;
+      font-weight: normal;
+      text-rendering: optimizeLegibility;
+    }
+  </style>
+
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-53BWKJ5PSL"></script>
   <script>
@@ -70,7 +84,7 @@
   </script>
 </head>
 
-<body>
+<body class="dark">
   <noscript>You need to enable JavaScript to run this app.</noscript>
   <div id="alphabet"></div>
 </body>

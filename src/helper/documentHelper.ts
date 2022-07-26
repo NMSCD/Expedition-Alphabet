@@ -1,13 +1,15 @@
 
 export const toggleDarkModeClass = () => {
     const htmlTag = document.querySelector('#app-wrapper');
+    const bodyTag = document.querySelector('body');
     if (htmlTag == null) return false;
 
-    const hasClass = htmlTag.className.split(' ').indexOf('dark') > -1;
+    const hasClass = (htmlTag.className.split(' ').indexOf('dark') > -1)
+        ||
+        ((bodyTag?.className ?? '').split(' ').indexOf('dark') > -1);
 
     localStorage.setItem('dark-mode', hasClass ? 'light' : 'dark');
 
-    const bodyTag = document.querySelector('body');
     if (hasClass) {
         bodyTag?.classList?.add?.('light');
         bodyTag?.classList?.remove?.('dark');

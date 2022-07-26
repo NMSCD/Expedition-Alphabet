@@ -7,7 +7,7 @@ import { AlphabetPresenter } from './alphabetPresenter';
 const queryString = require('query-string');
 
 interface IState {
-    typedChars: Array<string>;
+    typedChars: string;
     alphabetCharacters: Array<any>;
 }
 
@@ -21,7 +21,7 @@ class AlphabetContainerUnconnected extends React.Component<IProps, IState> {
     constructor(props: IProps) {
         super(props);
         this.state = {
-            typedChars: [],
+            typedChars: '',
             alphabetCharacters: this.getCharObjsFromKeyboardId(keyboardDropdownOpts[0].id),
         }
     }
@@ -35,9 +35,9 @@ class AlphabetContainerUnconnected extends React.Component<IProps, IState> {
         }
     }
 
-    updateTypedChars = (newChar: string) => {
+    updateTypedChars = (newValue: string) => {
         this.setState({
-            typedChars: newChar.split(''),
+            typedChars: newValue,
         });
     }
 

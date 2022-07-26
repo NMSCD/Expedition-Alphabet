@@ -27,10 +27,22 @@
     }
 }
 
+.expedition-font {
+    font-family: 'NMS Alphabet', Helvetica, sans-serif !important;
+    font-size: 1.75em;
+    margin-bottom: 0.2em;
+    color: rgb(40, 40, 40);
+}
+
 .alphabet-block {
     position: relative;
     border: 3px rgba(0, 0, 0, 0.15) dashed;
     border-radius: 10px;
+
+    h1 {
+        font-size: 4em;
+        color: rgb(40, 40, 40);
+    }
 
     p {
         margin: 0;

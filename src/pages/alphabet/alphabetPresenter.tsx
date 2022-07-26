@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import Swal from 'sweetalert2';
 
 import { AppImage } from '../../constants/appImage';
-import { alphabetCharacters, additionalAlphabetCharacters, keyboardDropdownOpts } from '../../constants/characters';
+import { IAlphabetCharacters, keyboardDropdownOpts } from '../../constants/characters';
 import { site } from '../../constants/site';
 
 import { BasicLink } from '../../components/core/link';
@@ -13,8 +13,8 @@ import { Footer } from '../../components/common/footer';
 import { DarkModeToggle } from '../../components/common/darkModeToggle';
 
 interface IProps {
-    typedChars: Array<string>;
-    alphabetCharacters: Array<any>;
+    typedChars: string;
+    alphabetCharacters: Array<IAlphabetCharacters>;
     updateTypedChars: (newChar: string) => void;
     changeCharacterOrder: (selectEvent: any) => void;
 }
@@ -29,7 +29,7 @@ export const AlphabetPresenter: React.FC<IProps> = (props: IProps) => {
     }
 
     const onImageClick = (character: string) => () => {
-        const newText = props.typedChars.join('') + character;
+        const newText = props.typedChars + character;
         props?.updateTypedChars?.(newText);
     }
 
@@ -54,11 +54,6 @@ export const AlphabetPresenter: React.FC<IProps> = (props: IProps) => {
     }
 
     const lightboxCloseClick = () => setImages([]);
-
-    let imageClass = 'small';
-    if (props.typedChars.length > 15) {
-        imageClass = 'tiny';
-    }
 
     return (
         <>
@@ -87,20 +82,31 @@ export const AlphabetPresenter: React.FC<IProps> = (props: IProps) => {
                     <p style={{ textAlign: 'center', fontStyle: 'italic' }}>Hover over a character and click on the question icon to view the places we got the characters from</p>
                     <div className="alphabet-grid">
                         {
-                            props.alphabetCharacters.map((charObj: any) => {
+                            props.alphabetCharacters.map((charObj: IAlphabetCharacters) => {
                                 return (
                                     <div
                                         key={`all-${charObj.name}`}
                                         className="alphabet-block no-select"
                                     >
                                         <p>{charObj.display ?? charObj.name}</p>
-                                        <BasicImage
-                                            imageUrl={charObj.img}
-                                            fallbackSrc={`/${AppImage.unknownImage}`}
-                                            classNames="alphabet pointer"
-                                            imageName={charObj.display ?? charObj.name}
-                                            onClick={onImageClick(charObj.unknown === true ? '?' : charObj.name)}
-                                        />
+                                        {
+                                            (charObj.unknown === true)
+                                                ? (
+                                                    <BasicImage
+                                                        imageUrl={charObj.img}
+                                                        fallbackSrc={`/${AppImage.unknownImage}`}
+                                                        classNames="alphabet pointer"
+                                                        imageName={charObj.display ?? charObj.name}
+                                                        onClick={onImageClick('?')}
+                                                    />
+                                                )
+                                                : (
+                                                    <h1 className="alphabet expedition-font pointer"
+                                                        onClick={onImageClick(charObj.name)}
+                                                    >{charObj.name}</h1>
+                                                )
+                                        }
+
                                         <Tooltip content="View usage" classNames="view-usage">
                                             <BasicImage
                                                 imageUrl={`/assets/img/uses.png`}
@@ -126,32 +132,15 @@ export const AlphabetPresenter: React.FC<IProps> = (props: IProps) => {
                 <section className="main style3" style={{ paddingTop: '4em' }}>
                     <div className="row">
                         <div className="col-12 ta-center mb1">
-                            <p>Type something!</p>
-                            {
-                                (props.typedChars ?? []).map((char: string, index: number) => {
-                                    let displayChar = alphabetCharacters.find(a => (a.display ?? a.name) === char.toLocaleLowerCase() && a.unknown !== true);
-                                    if (char === ' ') {
-                                        displayChar = additionalAlphabetCharacters.space;
-                                    }
-
-                                    return (
-                                        <BasicImage
-                                            key={`typed-${displayChar?.name}-${index}`}
-                                            classNames={imageClass}
-                                            imageUrl={displayChar?.img ?? `/${AppImage.unknownImage}`}
-                                            fallbackSrc={`/${AppImage.unknownImage}`}
-                                            imageName={displayChar?.name ?? 'unknown'}
-                                        />
-                                    );
-                                })
-                            }
+                            <span>Type something!</span><br />
+                            <span className="expedition-font">{props.typedChars}</span>
                         </div>
                         <div className="col-12 ta-center">
                             <input
                                 type="text" id="sentence" name="sentence"
                                 style={{ width: '80%', margin: '0 auto' }}
                                 placeholder="Secret text..."
-                                value={props.typedChars.join('')}
+                                value={props.typedChars}
                                 onChange={onChange}
                             />
                         </div>

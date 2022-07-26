@@ -37,8 +37,19 @@
         color: white;
     }
 
-    .alphabet-block {
+    .expedition-font {
+        color: rgb(215, 215, 215);
+    }
+
+    .alphabet-block,
+    .alphabet-block p {
         border-color: rgba(255, 255, 255, 0.35);
+        color: white;
+
+        h1,
+        h2 {
+            color: rgb(215, 215, 215);
+        }
     }
 
     input[type="text"],

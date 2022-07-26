@@ -1,4 +1,11 @@
-export const alphabetCharacters = [
+export interface IAlphabetCharacters {
+    display?: string;
+    unknown?: boolean;
+    name: string;
+    img: string;
+}
+
+export const alphabetCharacters: Array<IAlphabetCharacters> = [
     { name: 'a', img: '/assets/img/alphabet/a.svg' },
     { name: 'b', img: '/assets/img/alphabet/b.svg' },
     { name: 'c', img: '/assets/img/alphabet/c.svg' },
