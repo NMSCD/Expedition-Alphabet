@@ -26,13 +26,6 @@ Thanks to Github Pages, the fonts are readily available to be integrated into yo
 ```
 
 <br />
-
-# Contribute to the Expedition Alphabet font
-
-### FontForge
-Right now the font is designed using [FontForge](https://fontforge.org). I am not sure if this is the best tool and I have tried to keep the icons consistent with the SVG files of the [Expedition Alphabet website](https://nmscd.github.io/expedition-alphabet). Good luck, have fun!
-
-<br />
 <br />
 
 ![NMSCD-Banner](https://github.com/NMSCD/About/raw/master/banner/current-small.png)

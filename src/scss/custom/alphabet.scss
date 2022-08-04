@@ -28,7 +28,7 @@
 }
 
 .expedition-font {
-    font-family: 'NMS Alphabet', Helvetica, sans-serif !important;
+    font-family: "NMS Alphabet", Helvetica, sans-serif !important;
     font-size: 1.75em;
     margin-bottom: 0.2em;
     color: rgb(40, 40, 40);
@@ -38,6 +38,7 @@
     position: relative;
     border: 3px rgba(0, 0, 0, 0.15) dashed;
     border-radius: 10px;
+    transition: background-color 250ms ease-in-out;
 
     h1 {
         font-size: 4em;
@@ -55,7 +56,6 @@
         margin: 10px 0;
     }
 
-
     .view-usage {
         position: absolute;
         top: 0.15em;
@@ -68,8 +68,8 @@
         }
     }
 
-
     &:hover {
+        background-color: #84dcff25;
         .view-usage {
             opacity: 1;
         }
