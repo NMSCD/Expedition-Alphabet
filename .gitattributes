@@ -1,0 +1,2 @@
+src/scss/main.scss -linguist-detectable
+src/scss/libs/* -linguist-detectable
