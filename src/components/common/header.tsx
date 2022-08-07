@@ -17,7 +17,7 @@ export const Header: React.FC<IProps> = (props: IProps) => {
                     <li><BasicInternalLink href={route.alphabet} additionalClassNames="primary button scrolly">Skip straight to alphabet</BasicInternalLink></li>
                 </ul>
                 <ul className="actions special">
-                    <li><HashLink to="#whatStarted" className="primary button scrolly">Read More</HashLink></li>
+                    <li><HashLink to="#whatStarted" className="primary button scrolly">Read More &amp; download</HashLink></li>
                 </ul>
             </div>
         </section>
