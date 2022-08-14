@@ -1,7 +1,7 @@
 {
   "name": "nomanssky-expeditions-alphabet",
   "homepage": "https://alphabet.nmscd.com",
-  "version": "0.2.4",
+  "version": "0.2.5",
   "private": false,
   "scripts": {
     "start": "react-scripts start",

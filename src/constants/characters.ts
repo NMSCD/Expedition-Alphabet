@@ -45,8 +45,9 @@ export const alphabetCharacters: Array<IAlphabetCharacters> = [
     { name: '.', display: 'Period', img: '/assets/img/alphabet/period.svg' },
     { name: ':', display: 'Colon', img: '/assets/img/alphabet/colon.svg' },
     { name: ' ', display: 'Space', img: '/assets/img/alphabet/space.svg' },
-    { name: '🥩', display: '?', unknown: true, img: '/assets/img/alphabet/unknown1.svg' },
-    { name: '🥐', display: '?', unknown: true, img: '/assets/img/alphabet/unknown2.svg' },
+    { name: '?', display: '?', img: '/assets/img/alphabet/unknown1.svg' },
+    { name: '🥩', display: '???', unknown: true, img: '/assets/img/alphabet/unknown1.svg' },
+    { name: '🥐', display: '???', unknown: true, img: '/assets/img/alphabet/unknown2.svg' },
 ];
 
 export const additionalAlphabetCharacters = {
@@ -54,7 +55,7 @@ export const additionalAlphabetCharacters = {
 };
 
 const keyLayouts = {
-    other: ['.', ':', ' ', '🥩', '🥐'],
+    other: ['.', ':', '?', ' ', '🥩', '🥐'],
     numbers: ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'],
     alphabetical: ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'],
     qwerty: ['q', 'w', 'e', 'r', 't', 'y', 'u', 'i', 'o', 'p', '[', ']', 'a', 's', 'd', 'f', 'g', 'h', 'j', 'k', 'l', ';', '\'', '\\', 'z', 'x', 'c', 'v', 'b', 'n', 'm', ',', '.', '/'],
