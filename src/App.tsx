@@ -1,12 +1,12 @@
-import React from 'react';
-import { HashRouter, Route, Switch } from 'react-router-dom';
+import React from "react";
+import { HashRouter, Route, Routes } from "react-router-dom";
 
-import * as route from './constants/route';
-import { ScrollToTop } from './components/core/scroll/scrollToTop';
+import * as route from "./constants/route";
+import { ScrollToTop } from "./components/core/scroll/scrollToTop";
 
-import { HomePresenter } from './pages/home/homePresenter';
-import { AlphabetContainer } from './pages/alphabet/alphabetContainer';
-import { DisplayPresenter } from './pages/display/displayPresenter';
+import { HomePage } from "./pages/homePage";
+import { AlphabetPage } from "./pages/alphabetPage";
+import { DisplayPage } from "./pages/displayPage";
 
 interface IProps {
   darkMode: string;
@@ -17,13 +17,13 @@ export const App: React.FC<IProps> = (props: IProps) => {
     <div id="app-wrapper" className={props.darkMode}>
       <HashRouter>
         <ScrollToTop>
-          <Switch>
-            <Route exact={true} path={route.home} component={HomePresenter} />
-            <Route path={route.alphabet} component={AlphabetContainer} />
-            <Route path={route.display} component={DisplayPresenter} />
-          </Switch>
+          <Routes>
+            <Route index path={route.home} Component={HomePage} />
+            <Route path={route.alphabet} Component={AlphabetPage} />
+            <Route path={route.display} Component={DisplayPage} />
+          </Routes>
         </ScrollToTop>
       </HashRouter>
     </div>
   );
-}
+};

@@ -1,20 +1,18 @@
 import * as React from "react";
-import { withRouter } from "react-router-dom";
+import { useEffect } from "react";
+import { useLocation } from "react-router-dom";
 
 interface IProps {
-    location: any;
+  children: any;
 }
 
-class ScrollToTopWithoutRoute extends React.Component<IProps> {
-    componentDidUpdate(prevProps: IProps) {
-        if (this.props.location !== prevProps.location) {
-            window.scrollTo(0, 0);
-        }
-    }
+export const ScrollToTop: React.FC<IProps> = (props: IProps) => {
+  const location = useLocation();
 
-    render() {
-        return this.props.children
-    }
-}
+  useEffect(() => {
+    window.scrollTo(0, 0);
+    // eslint-disable-next-line
+  }, [location.pathname]);
 
-export const ScrollToTop = withRouter((props: IProps) => <ScrollToTopWithoutRoute {...props} />)
+  return props.children;
+};
